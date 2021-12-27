@@ -1,0 +1,62 @@
+<header>
+    <a href="/jsp/home" class="logo"><img alt="Sadsirko" title="Sadsirko" src="/img/sadsirko.jpg"width="50" height="50"></a>
+    <div class="languages">
+        <a href="?language=ru"><img alt="In Russian" title="In Russian" src="/img/ru.png"></a>
+        <a href="?language=en"><img alt="In English" title="In English" src="/img/gb.png"></a>
+    </div>
+    <div class="login-or-register-box">
+        <c:choose>
+            <c:when test="${empty person}">
+                <a href="/jsp/login">Login</a>
+                |
+                <a href="/jsp/register">Register</a>
+            </c:when>
+            <c:otherwise>
+                Hello, ${person.email}!
+            </c:otherwise>
+        </c:choose>
+    </div>
+    <nav class="navbar sticky-top navbar-light navbar-expand-md">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="/jsp/home">Home</a></li>
+                <c:choose>
+                    <c:when test="${empty personRole}">
+                        <li class="nav-item"><a class="nav-link" href="/jsp/login">Cabinet</a></li>
+                    </c:when>
+                    <c:otherwise>
+                        <li class="nav-item"><a class="nav-link" href="/jsp/reader/cabinet">Cabinet</a></li>
+
+                    </c:otherwise>
+                </c:choose>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <c:choose>
+                    <c:when test="${empty person}">
+                    </c:when>
+                    <c:otherwise>
+                        <c:if test="${personRole == 1}">
+                            <div class="dropdown">
+                                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                    Management
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <li class="nav-item"><a class="nav-link" href="/jsp/home">Add Printcenter</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="/jsp/home">Create
+                                        Application</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="/jsp/home">View
+                                        Applications</a></li>
+                                </div>
+                            </div>
+                        </c:if>
+                        <li class="nav-item"><a class="nav-link" href="/jsp/logout">Logout</a></li>
+                    </c:otherwise>
+                </c:choose>
+            </ul>
+        </div>
+    </nav>
+</header>
