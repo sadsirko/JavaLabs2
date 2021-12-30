@@ -20,19 +20,16 @@ import java.util.List;
 
 public class GetCabinetAction implements Action {
     private final SubscriptionService sub = new SubscriptionServiceImpl();
-    private final PrintCenterService printCenterService = new PrintCenterServiceImpl();
     private final ReaderService readerService = new ReaderServiceImpl();
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws ActionException {
         HttpSession session = request.getSession();
 
-        Person person = (Person) request.getSession().getAttribute("person");
+        Person person = (Person) session.getAttribute("person");
 
         Reader reader = readerService.findByPersonId(person.getId());
 
-        List<Subscription> subscriptionList =
-                sub.findByReaderId(reader.getId());
         List<PrintCenter> printCenterList =
                 sub.getNames(reader.getId());
 

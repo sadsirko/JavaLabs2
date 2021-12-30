@@ -4,7 +4,71 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7daf220-d5d0-4c9c-a997-23315ddb4177" name="Changes" comment="" />
+    <list default="true" id="b7daf220-d5d0-4c9c-a997-23315ddb4177" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../lab23/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_12_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab23/.idea/libraries/Maven__org_apache_logging_log4j_log4j_core_2_12_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/.idea/artifacts/lab23_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/.idea/artifacts/lab23_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/lab23.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/lab23.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/model/DBManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/model/DBManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/model/dao/PersonDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/model/dao/PersonDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/model/dao/PrintCenterDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/model/dao/PrintCenterDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/model/dao/ReaderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/model/dao/ReaderDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/model/dao/RoleDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/model/dao/RoleDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/model/dao/SubscriptionDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/model/dao/SubscriptionDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/model/dao/ThemeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/model/dao/ThemeDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/model/entity/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/model/entity/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/model/entity/PrintCenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/model/entity/PrintCenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/model/exception/DaoException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/model/exception/DaoException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/model/exception/ServiceException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/model/exception/ServiceException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/model/service/PersonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/model/service/PersonService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/model/service/PrintCenterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/model/service/PrintCenterService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/model/service/ReaderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/model/service/ReaderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/model/service/RoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/model/service/RoleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/model/service/SubscriptionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/model/service/SubscriptionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/model/service/ThemeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/model/service/ThemeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/model/service/seviceImp/PersonServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/model/service/seviceImp/PersonServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/model/service/seviceImp/PrintCenterServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/model/service/seviceImp/PrintCenterServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/model/service/seviceImp/ReaderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/model/service/seviceImp/ReaderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/model/service/seviceImp/RoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/model/service/seviceImp/RoleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/model/service/seviceImp/SubscriptionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/model/service/seviceImp/SubscriptionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/model/service/seviceImp/ThemeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/model/service/seviceImp/ThemeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/web/action/ActionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/web/action/ActionFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/web/action/get/GetAddPrintCenterAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/web/action/get/GetAddPrintCenterAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/web/action/get/GetCabinetAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/web/action/get/GetCabinetAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/web/action/get/GetEditAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/web/action/get/GetEditAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/web/action/get/GetErrorAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/web/action/get/GetErrorAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/web/action/get/GetHomeAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/web/action/get/GetHomeAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/web/action/get/GetHomeNameAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/web/action/get/GetHomeNameAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/web/action/get/GetHomePriceActionMax.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/web/action/get/GetHomePriceActionMax.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/web/action/get/GetHomePriceActionMin.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/web/action/get/GetHomePriceActionMin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/web/action/get/GetRegisterAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/web/action/get/GetRegisterAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/web/action/get/GetUsersAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/web/action/get/GetUsersAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/web/action/post/PostAddPrintCenterAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/web/action/post/PostAddPrintCenterAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/web/action/post/PostDeletePrintCenterAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/web/action/post/PostDeletePrintCenterAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/web/action/post/PostEditPrintCenterAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/web/action/post/PostEditPrintCenterAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/web/action/post/PostLoginAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/web/action/post/PostLoginAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/web/action/post/PostRegisterAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/web/action/post/PostRegisterAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/web/action/post/PostSubscriptionAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/web/action/post/PostSubscriptionAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/web/action/post/PostUpBalanceAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/web/action/post/PostUpBalanceAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/web/action/post/PostUserAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/src/main/java/com/sadsirko/lab23/web/action/post/PostUserAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/src/main/resources/log4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/src/main/webapp/WEB-INF/jsp/admin/add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/src/main/webapp/WEB-INF/jsp/admin/add.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/src/main/webapp/WEB-INF/jsp/admin/edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/src/main/webapp/WEB-INF/jsp/admin/edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/src/main/webapp/WEB-INF/jsp/admin/user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/src/main/webapp/WEB-INF/jsp/admin/user.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/src/main/webapp/WEB-INF/jsp/error.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/src/main/webapp/WEB-INF/jsp/error.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/src/main/webapp/WEB-INF/jsp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/src/main/webapp/WEB-INF/jsp/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/src/main/webapp/WEB-INF/jsp/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/src/main/webapp/WEB-INF/jsp/register.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/src/main/webapp/WEB-INF/jspf/header.jspf" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/src/main/webapp/WEB-INF/jspf/header.jspf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/src/main/webapp/js/form-validation.js" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/src/main/webapp/js/form-validation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/target/lab23-1.0-SNAPSHOT/WEB-INF/jsp/admin/edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/target/lab23-1.0-SNAPSHOT/WEB-INF/jsp/admin/edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/target/lab23-1.0-SNAPSHOT/WEB-INF/jsp/error.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/target/lab23-1.0-SNAPSHOT/WEB-INF/jsp/error.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/target/lab23-1.0-SNAPSHOT/WEB-INF/jsp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/target/lab23-1.0-SNAPSHOT/WEB-INF/jsp/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/target/lab23-1.0-SNAPSHOT/WEB-INF/jsp/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/target/lab23-1.0-SNAPSHOT/WEB-INF/jsp/register.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/target/lab23-1.0-SNAPSHOT/WEB-INF/jspf/header.jspf" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/target/lab23-1.0-SNAPSHOT/WEB-INF/jspf/header.jspf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/target/lab23-1.0-SNAPSHOT/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab23/target/lab23-1.0-SNAPSHOT/js/form-validation.js" beforeDir="false" afterPath="$PROJECT_DIR$/../lab23/target/lab23-1.0-SNAPSHOT/js/form-validation.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,7 +103,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lab23" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../demo1" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -99,6 +163,7 @@
       <workItem from="1640290740041" duration="31000" />
       <workItem from="1640603821839" duration="67000" />
       <workItem from="1640603960890" duration="18000" />
+      <workItem from="1640848886936" duration="1756000" />
     </task>
     <servers />
   </component>

@@ -13,7 +13,7 @@ public class DBManager {
         return DataSourceHolder.INSTANCE;
     }
 
-    private static class DataSourceHolder{
+    private static class DataSourceHolder {
         private static final DataSource INSTANCE;
 
         //once , when upload
@@ -27,7 +27,7 @@ public class DBManager {
             } catch (NamingException e) {
                 //some logging
             }
-            INSTANCE = ds ;
+            INSTANCE = ds;
         }
     }
 

@@ -14,6 +14,7 @@ import com.sadsirko.lab23.web.action.ActionException;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 public class PostSubscriptionAction implements Action {
 
@@ -22,6 +23,7 @@ public class PostSubscriptionAction implements Action {
     private final ReaderService readerService = new ReaderServiceImpl();
 
     public String execute(HttpServletRequest request, HttpServletResponse response) throws ActionException {
+        HttpSession session = request.getSession();
         Subscription sub = new Subscription();
         int printCenterId = Integer.parseInt(request.getParameter("printCenter_id"));
         int readerId = readerService.findByPersonId(Integer.parseInt(request.getParameter("person_id"))).getId();
@@ -29,7 +31,14 @@ public class PostSubscriptionAction implements Action {
         int bal = readerService.find(readerId).getBalance();
         sub.setPrintCenterId(printCenterId);
         sub.setReaderId(readerId);
-        readerService.changeBalance(readerId,bal-printCenterPrice);
-        subscriptionService.addSubscripption(sub);
+        try {
+            readerService.changeBalance(readerId, bal - printCenterPrice);
+            subscriptionService.addSubscripption(sub);
+        } catch (Exception e) {
+            session.setAttribute("errorMessage", e.getMessage());
+            return "redirect:/error";
+        }
+
         return "redirect:/reader/cabinet";
-    }}
+    }
+}

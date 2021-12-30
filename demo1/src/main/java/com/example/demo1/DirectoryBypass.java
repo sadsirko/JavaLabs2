@@ -8,13 +8,13 @@ public class DirectoryBypass {
     public DirectoryBypass(File startFile) {
         this.startFile = startFile;
         DirOutPut.getOutputDir().recreateDir();
+        executorHandler.execute(startFile);
         bypassing(startFile);
 
     }
 
     public void bypassing(File dir) {
         File[] children = dir.listFiles();
-
         for (File child : children) {
             if (child.isDirectory()) {
                 bypassing(child);

@@ -21,7 +21,7 @@ public class SubscriptionDAO {
     private static final String SQL_SELECT_SUBSCRIPTION_BY_READER_ID = "SELECT * FROM subscription WHERE reader_id=?";
     private static final String SQL_DELETE_BY_PRINT_CENTER_ID = "DELETE FROM subscription WHERE print_center_id=?";
 
-//
+    //
 //    private static final String SQL_UPDATE_STATUS_READER_BY_PERSON_ID = "update reader set status = " +
 //            "not status where id =?";
     private static final String SQL_INSERT_SUBSCRIPTION = "INSERT INTO subscription (" +
@@ -54,10 +54,10 @@ public class SubscriptionDAO {
         try (Connection connection = DATASOURCE.getConnection()) {
             try (PreparedStatement pstmt =
                          connection.prepareStatement(SQL_DELETE_BY_PRINT_CENTER_ID, Statement.RETURN_GENERATED_KEYS)) {
-                pstmt.setInt(1,id);
-                int row =  pstmt.executeUpdate();
+                pstmt.setInt(1, id);
+                int row = pstmt.executeUpdate();
                 connection.commit();
-                if ( row != 1) {
+                if (row != 1) {
                     throw new DaoException("Can't delete center");
                 }
             } catch (SQLException e) {
@@ -89,7 +89,9 @@ public class SubscriptionDAO {
                 } else {
                     throw new DaoException("Can't save sub");
                 }
-            } catch (SQLException e){connection.rollback();}
+            } catch (SQLException e) {
+                connection.rollback();
+            }
         } catch (SQLException e) {
             throw new DaoException("Can't save sub", e);
         }
@@ -120,6 +122,7 @@ public class SubscriptionDAO {
         }
         return sub;
     }
+
     private List<Subscription> toSubscriptionList(ResultSetMetaData metaData, ResultSet resultSet) throws SQLException {
         List<Subscription> subscriptionList = new ArrayList<>();
 

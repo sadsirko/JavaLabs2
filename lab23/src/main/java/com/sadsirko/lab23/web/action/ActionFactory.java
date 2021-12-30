@@ -24,10 +24,14 @@ public class ActionFactory {
         actions.put("GET/home/price/max", new GetHomePriceActionMax());
         actions.put("POST/reader/balance", new PostUpBalanceAction());
         actions.put("POST/admin/deletePrintCenter", new PostDeletePrintCenterAction());
-//        actions.put("POST/admin/createPrintCenter", new PostCreatePrintCenterAction());
-//        actions.put("POST/admin/editPrintCenter", new PostEditPrintCenterAction());
+        actions.put("POST/admin/editPrintCenter", new PostEditPrintCenterAction());
+        actions.put("POST/admin/add", new PostAddPrintCenterAction());
         actions.put("GET/admin/editPrintCenter", new GetEditAction());
-
+        actions.put("GET/admin/add", new GetAddPrintCenterAction());
+        actions.put("GET/admin/user", new GetUsersAction());
+        actions.put("POST/admin/user", new PostUserAction());
+        actions.put("GET/error", new GetErrorAction());
+        actions.put("GET/home/name", new GetHomeNameAction());
     }
 
     public static Action getAction(HttpServletRequest request) {

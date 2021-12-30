@@ -13,7 +13,7 @@
         </div>
         <div class="form-group">
             <label for="password">Password:</label>
-            <input type="password" class="form-control" placeholder="Enter password" id="password" name="password">
+            <input type="password" class="form-control" placeholder="Enter password" id="password" name="password" required minlength="8">
         </div>
         <button type="submit" class="btn btn-primary">Register</button>
     </form>

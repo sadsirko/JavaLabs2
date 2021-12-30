@@ -1,4 +1,4 @@
-$(function() {
+$(function () {
     $("form[name='registration']").validate({
         rules: {
             email: {
@@ -17,7 +17,7 @@ $(function() {
             },
             email: "Please enter a valid email address"
         },
-        submitHandler: function(form) {
+        submitHandler: function (form) {
             form.submit();
         }
     });
@@ -40,7 +40,7 @@ $(function() {
             },
             email: "Please enter a valid email address"
         },
-        submitHandler: function(form) {
+        submitHandler: function (form) {
             form.submit();
         }
     });
@@ -50,14 +50,14 @@ $(function() {
         rules: {
             upBal: {
                 required: true,
-                min:0,
-                max:10000000
+                min: 0,
+                max: 10000000
             },
         },
         messages: {
             upBalance: "Please enter a valid email address"
         },
-        submitHandler: function(form) {
+        submitHandler: function (form) {
             form.submit();
         }
     });

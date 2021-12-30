@@ -10,7 +10,6 @@ public class ExecutorHandler {
                 new LinkedBlockingDeque<Runnable>());
 
         public void execute(File directory) {
-
             threadPoolExecutor.execute(new CSharpFileSearch(directory));
         }
 }

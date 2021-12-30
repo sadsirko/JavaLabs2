@@ -10,14 +10,23 @@ import com.sadsirko.lab23.web.action.ActionException;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 public class PostUpBalanceAction implements Action {
     private final ReaderService readerService = new ReaderServiceImpl();
 
     public String execute(HttpServletRequest request, HttpServletResponse response) throws ActionException {
+        HttpSession session = request.getSession();
+
         int upBal = Integer.parseInt(request.getParameter("upBal"));
         int readerId = readerService.findByPersonId(Integer.parseInt(request.getParameter("person_id"))).getId();
         int bal = readerService.find(readerId).getBalance();
-        readerService.changeBalance(readerId,bal+upBal);
+        try {
+            readerService.changeBalance(readerId, bal + upBal);
+        } catch (Exception e) {
+            session.setAttribute("errorMessage", e);
+            return "redirect:/error";
+        }
         return "redirect:/reader/cabinet";
-    }}
+    }
+}

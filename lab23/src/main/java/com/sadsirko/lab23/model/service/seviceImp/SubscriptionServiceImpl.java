@@ -22,8 +22,8 @@ public class SubscriptionServiceImpl implements SubscriptionService {
     public List<PrintCenter> getNames(int id) {
         List<PrintCenter> printCenterList = new ArrayList<>();
         List<Subscription> subscriptionList = findByReaderId(id);
-        for (Subscription sub : subscriptionList){
-            printCenterList.add( printCenterDao.find (sub.getPrintCenterId()));
+        for (Subscription sub : subscriptionList) {
+            printCenterList.add(printCenterDao.find(sub.getPrintCenterId()));
         }
         return printCenterList;
     }

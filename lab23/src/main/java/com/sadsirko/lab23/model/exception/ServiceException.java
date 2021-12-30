@@ -1,6 +1,6 @@
 package com.sadsirko.lab23.model.exception;
 
-public class ServiceException extends RuntimeException{
+public class ServiceException extends RuntimeException {
     public ServiceException() {
         super();
     }

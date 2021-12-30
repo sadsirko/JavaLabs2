@@ -3,9 +3,12 @@
 <c:set var="title" value="Error"/>
 <%@ include file="/WEB-INF/jspf/head.jspf" %>
 <body>
+
 <div class="container">
+    <%@ include file="/WEB-INF/jspf/header.jspf" %>
+
     <c:choose>
-        <c:when test = "${not empty errorMessage}">
+        <c:when test="${not empty errorMessage}">
             <h2>${errorMessage}</h2>
         </c:when>
         <c:otherwise>
@@ -13,5 +16,7 @@
         </c:otherwise>
     </c:choose>
 </div>
+</div>
+
 </body>
 </html>

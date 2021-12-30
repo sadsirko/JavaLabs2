@@ -55,7 +55,7 @@ public class ReaderDAO {
     public Reader findById(int id) {
         try (Connection connection = DATASOURCE.getConnection()) {
             try (PreparedStatement pstmt = connection.prepareStatement(SQL_SELECT_READER_BY_ID)) {
-                pstmt.setInt(1,id);
+                pstmt.setInt(1, id);
                 return toReader(pstmt.getMetaData(), pstmt.executeQuery());
             }
         } catch (SQLException e) {
@@ -67,13 +67,17 @@ public class ReaderDAO {
         try (Connection connection = DATASOURCE.getConnection()) {
             try (PreparedStatement pstmt = connection.prepareStatement(SQL_UPDATE_STATUS_READER_BY_PERSON_ID)) {
                 pstmt.setInt(1, id);
-                if (pstmt.executeUpdate() != 1) {
+                int row = pstmt.executeUpdate();
+                connection.commit();
+                if (row != 1) {
                     throw new DaoException("Can't update reader");
                 }
             } catch (SQLException e) {
+                connection.rollback();
                 throw new DaoException("Can't update reader", e);
             }
         } catch (SQLException e) {
+
             throw new DaoException("Can't update readers", e);
         }
     }
@@ -121,7 +125,7 @@ public class ReaderDAO {
                 } else {
                     throw new DaoException("Can't save reader");
                 }
-            }  catch (SQLException e) {
+            } catch (SQLException e) {
                 connection.rollback();
                 throw new DaoException("Can't save reader", e);
             }
@@ -161,6 +165,7 @@ public class ReaderDAO {
         }
         return reader;
     }
+
     private List<Reader> toReaderList(ResultSetMetaData metaData, ResultSet resultSet) throws SQLException {
         List<Reader> readerList = new ArrayList<>();
 

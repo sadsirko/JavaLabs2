@@ -27,7 +27,7 @@ public class GetHomePriceActionMin implements Action {
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws ActionException {
         HttpSession session = request.getSession();
-        Theme theme = new Theme();
+
         Person person = (Person) request.getSession().getAttribute("person");
 
         if (person != null) {
@@ -37,7 +37,7 @@ public class GetHomePriceActionMin implements Action {
 
         List<Theme> themeList = themeService.findAll();
         List<PrintCenter> printCenterList = new ArrayList<>();
-            printCenterList = printCenterService.findAllSortedPriceMin();
+        printCenterList = printCenterService.findAllSortedPriceMin();
 
         request.setAttribute("printCenterList", printCenterList);
         request.setAttribute("themeList", themeList);

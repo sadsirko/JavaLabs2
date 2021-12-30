@@ -6,6 +6,8 @@ import java.util.List;
 
 public interface ThemeService {
     List<Theme> findAll();
+
     Theme find(int id);
+
     Theme findByName(String name);
 }

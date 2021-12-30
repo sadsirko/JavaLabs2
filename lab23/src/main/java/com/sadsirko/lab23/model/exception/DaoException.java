@@ -1,6 +1,6 @@
 package com.sadsirko.lab23.model.exception;
 
-public class DaoException extends  RuntimeException{
+public class DaoException extends RuntimeException {
     public DaoException(String message) {
         super(message);
     }

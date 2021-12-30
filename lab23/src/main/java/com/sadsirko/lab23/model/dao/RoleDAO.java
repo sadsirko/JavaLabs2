@@ -20,8 +20,6 @@ public class RoleDAO {
     private static final String SQL_SELECT_ROLE_ALL = "SELECT * FROM role";
 
 
-
-
     public List<Role> findAll() {
         try (Connection connection = DATASOURCE.getConnection()) {
             try (PreparedStatement pstmt = connection.prepareStatement(SQL_SELECT_ROLE_ALL)) {
@@ -53,7 +51,6 @@ public class RoleDAO {
             throw new DaoException("Can't find role", e);
         }
     }
-
 
 
     private Role toRole(ResultSetMetaData metaData, ResultSet resultSet) throws SQLException {

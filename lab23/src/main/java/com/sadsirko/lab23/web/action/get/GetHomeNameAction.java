@@ -19,7 +19,7 @@ import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GetHomeName implements Action {
+public class GetHomeNameAction implements Action {
     private final PrintCenterService printCenterService = new PrintCenterServiceImpl();
     private final ReaderService readerService = new ReaderServiceImpl();
     private final ThemeService themeService = new ThemeServiceImpl();

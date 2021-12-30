@@ -12,6 +12,7 @@ import com.sadsirko.lab23.model.service.seviceImp.ReaderServiceImpl;
 import com.sadsirko.lab23.model.service.seviceImp.ThemeServiceImpl;
 import com.sadsirko.lab23.web.action.Action;
 import com.sadsirko.lab23.web.action.ActionException;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -25,18 +26,20 @@ public class GetHomeAction implements Action {
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws ActionException {
         HttpSession session = request.getSession();
-        Theme theme = new Theme();
-        Person person = (Person) request.getSession().getAttribute("person");
+        try {
+            Person person = (Person) request.getSession().getAttribute("person");
 
-        if (person != null) {
-            Reader reader = readerService.findByPersonId(person.getId());
-            request.setAttribute("reader", reader);
+            if (person != null) {
+                Reader reader = readerService.findByPersonId(person.getId());
+                request.setAttribute("reader", reader);
+            }
+            List<Theme> themeList = themeService.findAll();
+            List<PrintCenter> printCenterList = printCenterService.findAllSortedName();
+            request.setAttribute("printCenterList", printCenterList);
+            request.setAttribute("themeList", themeList);
+        } catch (Exception e) {
+            session.setAttribute("errorMessage", e.getMessage());
         }
-        List<Theme> themeList = themeService.findAll();
-        List<PrintCenter> printCenterList = printCenterService.findAllSortedName();
-        request.setAttribute("printCenterList", printCenterList);
-        request.setAttribute("themeList", themeList);
-
         return "/home";
     }
 }

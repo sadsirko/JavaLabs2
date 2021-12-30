@@ -10,14 +10,15 @@ import java.util.List;
 public class PrintCenterServiceImpl implements PrintCenterService {
     private PrintCenterDAO printCenterDao = new PrintCenterDAO();
     private SubscriptionService subscriptionService = new SubscriptionServiceImpl();
+
     @Override
     public PrintCenter find(int id) {
         return printCenterDao.find(id);
     }
+
     public PrintCenter findByName(String name) {
         return printCenterDao.findByName(name);
     }
-
 
 
     @Override

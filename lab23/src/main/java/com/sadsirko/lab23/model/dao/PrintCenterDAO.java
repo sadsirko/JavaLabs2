@@ -43,7 +43,7 @@ public class PrintCenterDAO {
         try (Connection connection = DATASOURCE.getConnection()) {
             try (PreparedStatement pstmt = connection.prepareStatement(SQL_SELECT_PRINTCENTER_BY_NAME)) {
                 pstmt.setString(1, printCenterName);
-               return toPrintCenter(pstmt.getMetaData(), pstmt.executeQuery());
+                return toPrintCenter(pstmt.getMetaData(), pstmt.executeQuery());
             }
         } catch (SQLException e) {
             throw new DaoException("Can't find printcenter", e);
@@ -88,7 +88,9 @@ public class PrintCenterDAO {
                 pstmt.setString(k++, printCenter.getName());
                 pstmt.setInt(k++, printCenter.getPrice());
                 pstmt.setInt(k++, printCenter.getThemeId());
-                if (pstmt.executeUpdate() == 1) {
+                int row = pstmt.executeUpdate();
+                connection.commit();
+                if (row == 1) {
                     ResultSet rs = pstmt.getGeneratedKeys();
                     if (rs.next()) {
                         int id = rs.getInt(1);
@@ -99,6 +101,9 @@ public class PrintCenterDAO {
                 } else {
                     throw new DaoException("Can't save person");
                 }
+            } catch (SQLException e) {
+                connection.rollback();
+                throw new DaoException("Can't save person", e);
             }
         } catch (SQLException e) {
             throw new DaoException("Can't save person", e);
@@ -109,11 +114,11 @@ public class PrintCenterDAO {
         try (Connection connection = DATASOURCE.getConnection()) {
             try (PreparedStatement pstmt =
                          connection.prepareStatement(SQL_DELETE_BY_ID_PRINTCENTER, Statement.RETURN_GENERATED_KEYS)) {
-                pstmt.setInt(1,id);
-                int row =  pstmt.executeUpdate();
+                pstmt.setInt(1, id);
+                int row = pstmt.executeUpdate();
                 connection.commit();
 
-                if ( row != 1) {
+                if (row != 1) {
                     throw new DaoException("Can't delete center");
                 }
             } catch (SQLException e) {
@@ -134,9 +139,14 @@ public class PrintCenterDAO {
                 pstmt.setInt(k++, printCenter.getPrice());
                 pstmt.setInt(k++, printCenter.getThemeId());
                 pstmt.setInt(k, printCenter.getId());
-                if (pstmt.executeUpdate() != 1) {
+                int row = pstmt.executeUpdate();
+                connection.commit();
+                if (row != 1) {
                     throw new DaoException("Can't update print center");
                 }
+            } catch (SQLException e) {
+                connection.rollback();
+                throw new DaoException("Can't update print center", e);
             }
         } catch (SQLException e) {
             throw new DaoException("Can't update print center", e);

@@ -8,6 +8,7 @@ import java.util.List;
 
 public class RoleServiceImpl implements RoleService {
     RoleDAO roleDao = new RoleDAO();
+
     @Override
     public List<Role> findAll() {
         return roleDao.findAll();

@@ -78,7 +78,7 @@ public class PersonDAO {
                 } else {
                     throw new DaoException("Can't save person");
                 }
-            }  catch (SQLException e) {
+            } catch (SQLException e) {
                 connection.rollback();
                 throw new DaoException("Can't save person", e);
             }

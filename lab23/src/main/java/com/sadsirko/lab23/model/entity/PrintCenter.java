@@ -7,8 +7,6 @@ public class PrintCenter {
     private int themeId;
 
 
-
-
     public void setPrice(int price) {
         this.price = price;
     }

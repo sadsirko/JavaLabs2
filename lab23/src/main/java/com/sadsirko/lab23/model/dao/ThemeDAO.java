@@ -20,8 +20,6 @@ public class ThemeDAO {
     private static final String SQL_SELECT_THEME_ALL = "SELECT * FROM theme";
 
 
-
-
     public List<Theme> findAll() {
         try (Connection connection = DATASOURCE.getConnection()) {
             try (PreparedStatement pstmt = connection.prepareStatement(SQL_SELECT_THEME_ALL)) {
@@ -53,7 +51,6 @@ public class ThemeDAO {
             throw new DaoException("Can't find theme", e);
         }
     }
-
 
 
     private Theme toTheme(ResultSetMetaData metaData, ResultSet resultSet) throws SQLException {
