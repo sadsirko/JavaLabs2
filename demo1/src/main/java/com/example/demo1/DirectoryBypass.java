@@ -2,11 +2,10 @@ package com.example.demo1;
 import java.io.File;
 
 public class DirectoryBypass {
-    private File startFile;
+
     private ExecutorHandler executorHandler = new ExecutorHandler();
 
     public DirectoryBypass(File startFile) {
-        this.startFile = startFile;
         DirOutPut.getOutputDir().recreateDir();
         executorHandler.execute(startFile);
         bypassing(startFile);
@@ -17,8 +16,8 @@ public class DirectoryBypass {
         File[] children = dir.listFiles();
         for (File child : children) {
             if (child.isDirectory()) {
-                bypassing(child);
                 executorHandler.execute(child);
+                bypassing(child);
             }
         }
     }

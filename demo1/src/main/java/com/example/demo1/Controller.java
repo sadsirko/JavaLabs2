@@ -16,6 +16,7 @@ public class Controller {
 
             else {
                 bypassing = new DirectoryBypass(directory);
+
                 System.out.println("All changed files are successfully saved in output_dir");
             }
         }
